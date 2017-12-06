@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
   end
 
   private
+
   def require_login
     if current_user
       redirect_to  '/secret'
