@@ -7,12 +7,10 @@ class ApplicationController < ActionController::Base
     session[:name]
   end
 
+  private
+
   def require_login
-    if current_user
-      redirect_to  '/secret'
-    else
-      redirect_to '/login'
-    end
+   redirect_to '/login' unless current_user
   end
 
 end
