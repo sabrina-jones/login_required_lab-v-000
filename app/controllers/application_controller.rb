@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
     session[:name]
   end
 
+  private
   def require_login
     if current_user
       redirect_to  '/secret'
